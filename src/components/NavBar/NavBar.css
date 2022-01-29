@@ -1,0 +1,53 @@
+.header {
+  background-color: black;
+  color: white;
+  height: 200px;
+}
+
+.header-titleContainer {
+  margin: 0px 100px 0px 100px;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-name1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header-name2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(238, 238, 73);
+}
+
+.header-navBar {
+  margin: 0px 100px 0px 100px;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-navBar-links {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.navBar-link {
+  color: white;
+  font-size: large;
+  margin-right: 30px;
+  text-decoration: none;
+  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navBar-link:hover {
+  color: rgb(238, 238, 73);
+}
+
+.header-navBar-cart {
+  width: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
