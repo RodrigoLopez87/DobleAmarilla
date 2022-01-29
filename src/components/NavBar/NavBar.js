@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import { CartWidget } from "../CartWidget.js/CartWidget";
 
 export const NavBar = () => {
   return (
@@ -14,7 +15,7 @@ export const NavBar = () => {
             <a className="navBar-link" href="https://google.com">Accesorios</a>
           </div>
           <div className="header-navBar-cart">
-            <h2>Hola</h2>
+            <CartWidget/>
           </div>
         </nav>
       </header>
