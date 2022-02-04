@@ -1,9 +1,9 @@
 .card {
-  border: black;
-  width: 200px;
-  height: 200px;
-  border-style: solid;
+  margin: 0px 20px 20px 0px;
+  width: 300px;
+  height: 400px;
   border-width: thin;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 }
