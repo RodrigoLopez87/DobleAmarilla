@@ -1,5 +1,3 @@
-import "./item.css";
-
 export const Item = ({id, title, description, price, imgUrl}) => {
   return (
     <>

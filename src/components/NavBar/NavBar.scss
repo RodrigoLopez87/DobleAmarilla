@@ -1,0 +1,51 @@
+.header {
+  background-color: $color-black;
+  color: $color-white;
+  height: 10rem;
+  
+  &-titleContainer {
+    margin: 0rem 5rem 0rem 5rem;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    
+    &-name1 {
+      font-weight: lighter;
+    }
+    
+    &-name2 {
+      font-weight: bolder;
+      color : $color-yellow;
+    }
+  }
+    
+  &-navBar {
+    margin: 0rem 5rem 0rem 5rem;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    
+    &-links {
+      width: 50%;
+      margin-bottom: 0.5rem;
+      
+      &-link {
+        color: $color-white;
+        font-size: large;
+        margin-right: 2rem;
+        text-decoration: none;
+      }
+      
+      &-link:hover {
+        color: $color-yellow;
+      }
+    }
+        
+    &-cart {
+      width: 50%;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

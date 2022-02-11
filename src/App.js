@@ -1,7 +1,6 @@
+import './styles/styles.scss';
 import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { PruebaPromesa } from "./components/PruebaPromesa/PruebaPromesa";
-import "./styles.css";
 
 function App() {
  
@@ -9,7 +8,6 @@ function App() {
     <>
       <NavBar/>
       <ItemListContainer/>
-      {/* <PruebaPromesa/> */}
     </>
   );
 }
