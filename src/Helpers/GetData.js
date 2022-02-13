@@ -7,9 +7,3 @@ export const GetData  = () => {
     }, 2000);
   })
 }
-
-
-
-//useState
-//promesa
-//useEffect

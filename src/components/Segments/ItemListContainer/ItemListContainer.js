@@ -1,5 +1,5 @@
 import { ItemList } from "../ItemList/ItemList";
-import { GetData } from "../../Helpers/GetData";
+import { GetData } from "../../../Helpers/GetData";
 import { useEffect, useState } from "react";
 
 export const ItemListContainer = () => {

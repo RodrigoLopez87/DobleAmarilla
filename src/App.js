@@ -1,13 +1,22 @@
 import './styles/styles.scss';
-import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { NavBar } from "./components/Segments/NavBar/NavBar";
+import { Shoes } from './components/Pages/Shoes/Shoes';
+import { Accesories } from './components/Pages/Accesories/Accesories';
+import { Clothes } from './components/Pages/Clothes/Clothes';
 
 function App() {
  
   return (
     <>
-      <NavBar/>
-      <ItemListContainer/>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={ <Shoes/> }/>
+          <Route path="/indumentaria" element={ <Clothes/> }/>
+          <Route path="/accesorios" element={ <Accesories/> }/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
