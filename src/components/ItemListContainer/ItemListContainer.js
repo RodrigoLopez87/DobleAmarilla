@@ -1,5 +1,5 @@
 import { ItemList } from "../ItemList/ItemList";
-import { GetData } from "../../Helpers/GetData";
+import { GetProductList } from "../../Helpers/GetData";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
     
-    GetData(categoryId)
+    GetProductList(categoryId)
     .then((res) => {
       setProductos(res);
     })

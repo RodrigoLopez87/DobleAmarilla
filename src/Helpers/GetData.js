@@ -1,6 +1,6 @@
 import { Products } from "../Mocks/Products";
 
-export const GetData  = (category) => {
+export const GetProductList  = (category) => {
   return new Promise( (resolve, reject) => {
     setTimeout(() => {
 
@@ -13,5 +13,13 @@ export const GetData  = (category) => {
         resolve(Products);
       }
     }, 1000);
-  })
+  });
+}
+
+export const GetProductDetail = (productId) => {
+  return new Promise ((resolve) => {
+    setTimeout(() => {
+      resolve(Products.filter(prod => prod.id === productId));
+    }, 2000)
+  });
 }
