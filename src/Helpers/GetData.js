@@ -1,9 +1,17 @@
-import { Shoes } from "../Mocks/Shoes";
+import { Products } from "../Mocks/Products";
 
-export const GetData  = () => {
+export const GetData  = (category) => {
   return new Promise( (resolve, reject) => {
     setTimeout(() => {
-      resolve(Shoes);
-    }, 2000);
+
+      if (category)
+      {
+        resolve(Products.filter(prod => prod.category === category));
+      }
+      else
+      {
+        resolve(Products);
+      }
+    }, 1000);
   })
 }

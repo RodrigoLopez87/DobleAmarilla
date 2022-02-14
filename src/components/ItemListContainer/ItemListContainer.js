@@ -1,16 +1,21 @@
 import { ItemList } from "../ItemList/ItemList";
 import { GetData } from "../../Helpers/GetData";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
   
-  const [loading, setLoading] = useState(true);
-  const [productos, setProductos] = useState([]); 
+  const [loading, setLoading] = useState();
+  const [productos, setProductos] = useState([]);
+  
+  const { categoryId } = useParams(); 
 
   useEffect(() => {
-    GetData()
+    setLoading(true);
+    
+    GetData(categoryId)
     .then((res) => {
-        setProductos(res);
+      setProductos(res);
     })
     .catch((err) => {
         console.log(err);
@@ -18,7 +23,7 @@ export const ItemListContainer = () => {
     .finally(() => {
       setLoading(false);
     })
-  }, []);
+  }, [categoryId]);
  
 
   return (
