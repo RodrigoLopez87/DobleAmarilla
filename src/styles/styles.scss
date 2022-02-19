@@ -1,7 +1,8 @@
 @import './variables.scss';
 @import './global.scss';
+@import './common.scss';
 @import '../components/CartWidget/CartWidget.scss';
 @import '../components/NavBar/NavBar.scss';
-@import '../components/ItemList/ItemList.scss';
 @import '../components/Items/item.scss';
 @import '../components/ItemDetail/ItemDetail.scss';
+@import '../components/ItemCount/ItemCount.scss';

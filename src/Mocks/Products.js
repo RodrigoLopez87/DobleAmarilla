@@ -4,6 +4,7 @@ export const Products = [
     title : "Adidas",
     description : "Mutator",
     price : 4000,
+    stock : 10,
     imgUrl : "",
     category : "botines"
   },
@@ -12,6 +13,7 @@ export const Products = [
     title : "Adidas",
     description : "Predator",
     price : 4000,
+    stock : 10,
     imgUrl : "",
     category : "botines"
   },
@@ -20,6 +22,7 @@ export const Products = [
     title : "Adidas",
     description : "Copa",
     price : 4000,
+    stock : 10,
     imgUrl : "",
     category : "botines"
   },
@@ -28,6 +31,7 @@ export const Products = [
     title : "Nike",
     description : "Phantom Vision",
     price : 4000,
+    stock : 10,
     imgUrl : "",
     category : "botines"
   },
@@ -36,6 +40,7 @@ export const Products = [
     title : "Nike",
     description : "Phantom Venom",
     price : 4000,
+    stock : 10,
     imgUrl : "",
     category : "botines"
   },
@@ -44,6 +49,7 @@ export const Products = [
     title : "Nike",
     description : "Remera sportswear",
     price : 3200,
+    stock : 10,
     imgUrl : "",
     category : "indumentaria"
   },
@@ -52,6 +58,7 @@ export const Products = [
     title : "Nike",
     description : "Remera Thunder Block",
     price : 3500,
+    stock : 10,
     imgUrl : "",
     category : "indumentaria"
   },
@@ -60,15 +67,16 @@ export const Products = [
     title : "Nike",
     description : "Remera Nike Futura",
     price : 3000,
+    stock : 10,
     imgUrl : "",
     category : "indumentaria"
   },
-  ,
   {
     id : 9,
     title : "Adidas",
     description : "Gorra baseball",
     price : 2999,
+    stock : 10,
     imgUrl : "",
     category : "accesorios"
   },
@@ -77,6 +85,7 @@ export const Products = [
     title : "Adidas",
     description : "Gorra Trucker",
     price : 2500,
+    stock : 10,
     imgUrl : "",
     category : "accesorios"
   },
@@ -85,6 +94,7 @@ export const Products = [
     title : "Adidas",
     description : "Gorro Beanie Tiro",
     price : 2200,
+    stock : 10,
     imgUrl : "",
     category : "accesorios"
   },
