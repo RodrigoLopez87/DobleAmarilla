@@ -12,7 +12,7 @@ export const GetProductList  = (category) => {
       {
         resolve(Products);
       }
-    }, 1000);
+    }, 500);
   });
 }
 
@@ -20,6 +20,6 @@ export const GetProductDetail = (productId) => {
   return new Promise ((resolve) => {
     setTimeout(() => {
       resolve(Products.filter(prod => prod.id === productId));
-    }, 2000)
+    }, 500)
   });
 }

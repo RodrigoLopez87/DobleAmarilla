@@ -21,7 +21,7 @@ export const ItemDetailContainer = () => {
     .finally(() => {
       setLoading(false);
     })
-  }, []);
+  });
   
   return (
     <>

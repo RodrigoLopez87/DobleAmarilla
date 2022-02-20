@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ItemCount = ({max, min = 0}) => {
+export const ItemCount = ({max, min = 0, addItem}) => {
 
   const [counter, setCounter] = useState(min);
 
@@ -12,12 +12,19 @@ export const ItemCount = ({max, min = 0}) => {
     counter < max && setCounter(counter + 1);
   }
 
+  const handleAdd = () => {
+    addItem(counter);
+  }
+
   return (
     <>
       <div>
         <button onClick={handleSubstractClick}>-</button>
         <span>{counter}</span>
         <button onClick={handleAddClick}>+</button>
+      </div>
+      <div>
+        <button onClick={handleAdd}>Agregar al carrito</button>
       </div>
     </>
   );
