@@ -4,15 +4,16 @@ import { useContext, useEffect, useState } from "react";
 
 export const ItemDetail = ({id, title, description, price, stock}) => {
   
+  const [ counter, setCounter] = useState(0);
   const { cart, addToCart } = useContext(CartContext);
   
-  const addItem = (quantity) => {
+  const handleAddItem = () => {
     addToCart([
       id,
       title,
       description,
       price,
-      quantity
+      counter
     ]);
   }
 
@@ -27,7 +28,10 @@ export const ItemDetail = ({id, title, description, price, stock}) => {
           <h2>{title}</h2>
           <h2>{description}</h2>
           <h2>${price}</h2>
-          <ItemCount max={stock} addItem={addItem} ></ItemCount>
+          <ItemCount max={stock} counter={counter} setCounter={setCounter} ></ItemCount>
+          <div>
+            <button onClick={handleAddItem}>Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </>
