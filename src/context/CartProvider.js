@@ -13,11 +13,16 @@ export const CartProvider = ({children}) => {
     return cart.reduce((acc, prod) => acc + prod.counter, 0);
   }
 
+  const isInCart = (id) => {
+    return cart.some(prod => prod.id === id);
+  }
+
   return (
     <CartContext.Provider value={{
         cart,
         addToCart,
-        cartQuantity
+        cartQuantity,
+        isInCart
     }}>
       {children}
     </CartContext.Provider>

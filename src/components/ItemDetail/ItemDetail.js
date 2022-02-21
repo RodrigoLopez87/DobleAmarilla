@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 export const ItemDetail = ({id, title, description, price, stock}) => {
   
   const [ counter, setCounter] = useState(0);
-  const { cart, addToCart } = useContext(CartContext);
+  const { addToCart, isInCart } = useContext(CartContext);
   
   const handleAddItem = () => {
 
@@ -23,17 +23,28 @@ export const ItemDetail = ({id, title, description, price, stock}) => {
     addToCart(item);
   }
 
-  return (
+  return (  
+    
     <>
       <div className="container">
         <div className="detailCard">
           <h2>{title}</h2>
           <h2>{description}</h2>
           <h2>${price}</h2>
-          <ItemCount max={stock} counter={counter} setCounter={setCounter} ></ItemCount>
-          <div>
-            <button onClick={handleAddItem}>Agregar al carrito</button>
-          </div>
+          
+          {
+            isInCart(id) ? 
+              <button>Finalizar compra</button>
+            :
+            <>
+              <ItemCount max={stock} counter={counter} setCounter={setCounter} ></ItemCount>
+              <div>
+                <button onClick={handleAddItem}>Agregar al carrito</button>
+              </div>
+            </>
+          }
+
+
         </div>
       </div>
     </>
