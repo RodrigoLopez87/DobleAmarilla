@@ -1,6 +1,7 @@
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
 
@@ -9,8 +10,10 @@ export const CartWidget = () => {
   return (
     <>
       <div>
-        <ShoppingCartOutlinedIcon className="cart"></ShoppingCartOutlinedIcon>
-        <span className="cart">{cartQuantity()}</span>
+        <Link to="/cart">
+          <ShoppingCartOutlinedIcon className="cart"></ShoppingCartOutlinedIcon>
+          <span className="cart">{cartQuantity()}</span>
+        </Link>
       </div>
     </>
   );

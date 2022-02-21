@@ -1,6 +1,7 @@
 import { ItemCount } from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({id, title, description, price, stock}) => {
   
@@ -34,7 +35,7 @@ export const ItemDetail = ({id, title, description, price, stock}) => {
           
           {
             isInCart(id) ? 
-              <button>Finalizar compra</button>
+              <Link to="/cart"><button>Finalizar compra</button></Link>
             :
             <>
               <ItemCount max={stock} counter={counter} setCounter={setCounter} ></ItemCount>
