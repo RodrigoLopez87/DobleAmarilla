@@ -8,18 +8,20 @@ export const ItemDetail = ({id, title, description, price, stock}) => {
   const { cart, addToCart } = useContext(CartContext);
   
   const handleAddItem = () => {
-    addToCart([
+
+    if (counter === 0)
+      return;
+
+    const item = {
       id,
       title,
       description,
       price,
       counter
-    ]);
-  }
+    }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+    addToCart(item);
+  }
 
   return (
     <>
