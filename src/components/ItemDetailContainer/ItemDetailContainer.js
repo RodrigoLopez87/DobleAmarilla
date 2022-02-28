@@ -11,9 +11,9 @@ export const ItemDetailContainer = () => {
   const { productId } = useParams(); 
   
   useEffect(() => {
-    GetProductDetail(parseInt(productId))
-    .then((res) => {
-      setProduct(res[0]);
+    GetProductDetail(productId)
+    .then((doc) => {
+      setProduct({id: doc.id, ...doc.data()});
     })
     .catch((err) => {
         console.log(err);

@@ -15,7 +15,12 @@ export const ItemListContainer = () => {
     
     GetProductList(categoryId)
     .then((res) => {
-      setProductos(res);
+      setProductos(res.docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      }));
     })
     .catch((err) => {
         console.log(err);
