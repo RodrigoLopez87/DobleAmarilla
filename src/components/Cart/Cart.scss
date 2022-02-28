@@ -40,12 +40,7 @@
   margin-bottom: 2rem;
 }
 
-.deleteItemButton:hover{
-  color: $color-grey;
-  cursor: pointer;
-}
-
-.emptyCartButton:hover {
+.cartActionButton:hover{
   color: $color-grey;
   cursor: pointer;
 }

@@ -1,3 +1,7 @@
+.cartContainerHidden {
+  visibility: hidden;
+}
+
 .cart {
   color: $color-white;
 }
@@ -6,3 +10,4 @@
   color : $color-yellow;
   cursor: pointer;
 }
+

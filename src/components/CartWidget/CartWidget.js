@@ -9,7 +9,7 @@ export const CartWidget = () => {
 
   return (
     <>
-      <div>
+      <div className={cartQuantity() === 0 ? "cartContainerHidden" : ""}>
         <Link to="/cart">
           <ShoppingCartOutlinedIcon className="cart"></ShoppingCartOutlinedIcon>
           <span className="cart">{cartQuantity()}</span>
