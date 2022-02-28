@@ -1,0 +1,51 @@
+.cartTitle {
+  margin: 2rem 5rem 0 5rem;
+}
+
+.cartList {
+  margin: 2rem 5rem 2rem 5rem;
+  
+  &-itemsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &-itemCard {
+    display: flex;
+    margin: 0.5rem 0 2.5rem;
+    width: 30rem;
+    height: 3rem;
+  }
+
+  &-itemCardFirstHalf {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-itemCardSecondHalf {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
+
+.totalAmount {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.deleteItemButton:hover{
+  color: $color-grey;
+  cursor: pointer;
+}
+
+.emptyCartButton:hover {
+  color: $color-grey;
+  cursor: pointer;
+}

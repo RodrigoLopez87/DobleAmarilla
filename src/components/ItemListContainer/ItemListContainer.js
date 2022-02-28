@@ -11,8 +11,6 @@ export const ItemListContainer = () => {
   const { categoryId } = useParams(); 
 
   useEffect(() => {
-    console.log("se monta el itemlistcontainer");
-
     setLoading(true);
     
     GetProductList(categoryId)
@@ -36,7 +34,7 @@ export const ItemListContainer = () => {
   return (
     <>
       {
-        loading ? <h2>Cargando los datos...</h2> : <ItemList productos={productos}/>
+        loading ? <div className="container"><h2>Cargando...</h2></div> : <ItemList productos={productos}/>
       }
     </>
   );
