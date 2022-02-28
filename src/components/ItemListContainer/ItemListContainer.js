@@ -11,6 +11,8 @@ export const ItemListContainer = () => {
   const { categoryId } = useParams(); 
 
   useEffect(() => {
+    console.log("se monta el itemlistcontainer");
+
     setLoading(true);
     
     GetProductList(categoryId)
